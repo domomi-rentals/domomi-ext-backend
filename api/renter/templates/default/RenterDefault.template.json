@@ -1,0 +1,13 @@
+{
+  "default": {
+    "attributes": {
+      "fname": {
+        "required": true
+      },
+      "lname": {
+        "required": true
+      }
+    },
+    "displayedAttribute": "fname"
+  }
+}

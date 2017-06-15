@@ -1,0 +1,9 @@
+{
+  "default": {
+    "attributes": {
+      "name": {},
+      "blame": {}
+    },
+    "displayedAttribute": "name"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "orm": {
+    "adapters": {
+      "disk": "sails-disk",
+      "mysql": "sails-mysql"
+    },
+    "defaultConnection": "default",
+    "connections": {
+      "default": {
+        "adapter": "disk",
+        "filePath": ".tmp/",
+        "fileName": "default.db",
+        "migrate": "safe"
+      },
+      "permanent": {
+        "adapter": "disk",
+        "filePath": "./data/",
+        "fileName": "permanent.db",
+        "migrate": "safe"
+      },
+      "domomi": {
+        "adapter": "mysql",
+        "host": "localhost",
+        "port": 3306,
+        "user": "root",
+        "password": "kk/root28",
+        "database": "domomi"
+      },
+      "aws": {
+        "adapter": "mysql",
+        "host": "aa1i08acd8zi3ml.c68pjxumf36q.us-west-2.rds.amazonaws.com",
+        "port": 3306,
+        "user": "DomoMi",
+        "password": "domodbmi3",
+        "database": "ebdb"
+      }
+    }
+  }
+}

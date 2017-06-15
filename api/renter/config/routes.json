@@ -1,0 +1,57 @@
+{
+  "routes": {
+    "GET /renter": {
+      "controller": "Renter",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /renter/:id": {
+      "controller": "Renter",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /renter": {
+      "controller": "Renter",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "PUT /renter/:id": {
+      "controller": "Renter",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /renter/:id": {
+      "controller": "Renter",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /renter/:parentId/:relation": {
+      "controller": "Renter",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /renter/:parentId/:relation/:id": {
+      "controller": "Renter",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}
