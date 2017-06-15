@@ -1,6 +1,6 @@
 {
   "identity": "renter",
-  "connection": "domomi",
+  "connection": "aws",
   "defaultTemplate": "default",
   "displayedAttribute": "",
   "schema": true,
