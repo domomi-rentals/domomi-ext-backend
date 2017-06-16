@@ -48,8 +48,9 @@ module.exports = {
 
   create: function * () {
     this.model = model;
+    // console.dir(this.user.renters);
     try {
-      let entry = yield strapi.hooks.blueprints.findOrCreate(this);
+      let entry = yield strapi.hooks.blueprints.create(this);
       this.body = entry;
     } catch (err) {
       this.body = err;

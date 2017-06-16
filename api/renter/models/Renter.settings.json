@@ -11,6 +11,12 @@
     "lname": {
       "type": "string"
     },
+    "birthdate": {
+      "type": "date"
+    },
+    "phone": {
+      "type": "string"
+    },
     "lang": {
       "type": "string",
       "required": true

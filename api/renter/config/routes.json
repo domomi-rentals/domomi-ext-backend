@@ -19,6 +19,7 @@
       "action": "create",
       "policies": [
         "isAuthorized",
+        "isNewUser",
         "addDataCreate"
       ]
     },
