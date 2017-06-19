@@ -43,8 +43,8 @@ module.exports = {
         if (emailObj.hasOwnProperty("attachment")){
             console.log("TRUE!");
             mailOptions.attachments = [{   // file on disk as an attachment
-                filename: mailObj.attachment.filename,
-                path: mailObj.attachment.filepath // stream this file
+                filename: emailObj.attachment.filename,
+                path: emailObj.attachment.filepath // stream this file
             }];
         }
 
