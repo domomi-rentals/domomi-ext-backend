@@ -1,0 +1,67 @@
+'use strict';
+
+/**
+ * Module dependencies
+ */
+
+// Public node modules.
+const _ = require('lodash');
+const nodemailer = require('nodemailer');
+
+/**
+ * Email Contact service.
+ */
+
+module.exports = {
+
+
+    sendEmail: function * (emailObj) {
+
+
+        console.log("Ok in the Fn!");
+        // create reusable transporter object using the default SMTP transport
+        let transporter = nodemailer.createTransport({
+            // host: 'smtp.gmail.com',
+            // port: 465,
+            // secure: true, // secure:true for port 465, secure:false for port 587
+            service: 'Gmail',
+            auth: {
+                user: 'kkundanmal@gmail.com',
+                pass: 'kk/goog28'
+            }
+        });
+
+        // setup email data with unicode symbols
+        let mailOptions = {
+            from: '<kkundanmal@gmail.com>', // sender address
+            to: emailObj.to, // list of receivers
+            subject: emailObj.subject, // Subject line
+            text: emailObj.text, // plain text body
+            html: emailObj.html // html body
+        };
+
+        if (emailObj.hasOwnProperty("attachment")){
+            console.log("TRUE!");
+            mailOptions.attachments = [{   // file on disk as an attachment
+                filename: mailObj.attachment.filename,
+                path: mailObj.attachment.filepath // stream this file
+            }];
+        }
+
+        console.log(mailOptions.attachments);
+
+        // send mail with defined transport object
+        // transporter.sendMail(mailOptions, (error, info) => {
+        //     if (error) {
+        //         return console.log(error);
+        //     }
+        //     console.log('Message %s sent: %s', info.messageId, info.response);
+        //     return mailOptions;
+        // });
+        return transporter.sendMail(mailOptions);
+
+    }
+
+
+
+};
