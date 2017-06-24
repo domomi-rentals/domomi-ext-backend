@@ -51,6 +51,10 @@ module.exports = {
     // console.dir(this.user.renters);
     try {
       let entry = yield strapi.hooks.blueprints.create(this);
+      if (entry){
+        let pdf = strapi.api.renter.services.ticket.createTicket(entry);
+        console.log("PDF Created: ", pdf);
+      }
       this.body = entry;
     } catch (err) {
       this.body = err;
@@ -67,6 +71,10 @@ module.exports = {
     this.model = model;
     try {
       let entry = yield strapi.hooks.blueprints.update(this);
+      if (entry){
+        let pdf = strapi.api.renter.services.ticket.createTicket(entry);
+        console.log("PDF Updated: ", entry);
+      }
       this.body = entry;
     } catch (err) {
       this.body = err;
