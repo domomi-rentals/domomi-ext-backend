@@ -1,0 +1,64 @@
+{
+  "routes": {
+    "GET /application": {
+      "controller": "Application",
+      "action": "find",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "GET /application/:id": {
+      "controller": "Application",
+      "action": "findOne",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /application": {
+      "controller": "Application",
+      "action": "create",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+
+    "GET /application/validate-contact": {
+      "controller": "Application",
+      "action": "validateContact",
+      "policies": []
+    },
+
+    "PUT /application/:id": {
+      "controller": "Application",
+      "action": "update",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    },
+    "DELETE /application/:id": {
+      "controller": "Application",
+      "action": "destroy",
+      "policies": [
+        "isAuthorized"
+      ]
+    },
+    "POST /application/:parentId/:relation": {
+      "controller": "Application",
+      "action": "add",
+      "policies": [
+        "isAuthorized",
+        "addDataCreate"
+      ]
+    },
+    "DELETE /application/:parentId/:relation/:id": {
+      "controller": "Application",
+      "action": "remove",
+      "policies": [
+        "isAuthorized",
+        "addDataUpdate"
+      ]
+    }
+  }
+}

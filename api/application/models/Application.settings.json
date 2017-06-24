@@ -1,0 +1,39 @@
+{
+  "identity": "application",
+  "connection": "aws",
+  "displayedAttribute": "",
+  "schema": true,
+  "attributes": {
+
+    "url": {
+      "type": "string"
+    },
+    "postingId": {
+      "type": "string"
+    },
+    "titleText": {
+      "type": "string"
+    },
+    "validatedFname": {
+      "type": "string"
+    },
+    "validatedLname": {
+      "type": "string"
+    },
+    "validatedEmail": {
+      "type": "string"
+    },
+    "createdBy": {
+      "model": "user"
+    },
+    "updatedBy": {
+      "model": "user"
+    },
+    "contributors": {
+      "collection": "user",
+      "via": "applications"
+    }
+  },
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true
+}
