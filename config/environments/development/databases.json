@@ -28,10 +28,10 @@
       },
       "aws": {
         "adapter": "mysql",
-        "host": "domomidb.c68pjxumf36q.us-west-2.rds.amazonaws.com",
+        "host": "localhost",
         "port": 3306,
-        "user": "admin",
-        "password": "domodbmi3",
+        "user": "root",
+        "password": "kk/root28",
         "database": "domomi"
       }
     }

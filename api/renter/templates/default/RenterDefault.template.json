@@ -2,10 +2,44 @@
   "default": {
     "attributes": {
       "fname": {
+        "type": "string",
         "required": true
       },
       "lname": {
+        "type": "string",
         "required": true
+      },
+      "birthdate": {
+        "type": "date",
+        "required": true
+      },
+      "phone": {
+        "type": "string",
+        "required": true
+      },
+      "address": {
+        "type": "string",
+        "required": true
+      },
+      "city": {
+        "type": "string",
+        "required": true
+      },
+      "isNewAddress": {
+        "type": "boolean",
+        "required": true
+      },
+      "isRenting": {
+        "type": "boolean"
+      },
+      "landlordName": {
+        "type": "string"
+      },
+      "whyMove": {
+        "type": "string"
+      },
+      "pets": {
+        "type": "boolean"
       }
     },
     "displayedAttribute": "fname"

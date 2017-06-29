@@ -1,21 +1,48 @@
 {
   "identity": "renter",
   "connection": "aws",
-  "defaultTemplate": "default",
   "displayedAttribute": "",
   "schema": true,
   "attributes": {
     "fname": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "lname": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "birthdate": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "phone": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "isNewAddress": {
+      "type": "boolean",
+      "required": true
+    },
+    "isRenting": {
+      "type": "boolean"
+    },
+    "landlordName": {
       "type": "string"
+    },
+    "whyMove": {
+      "type": "string"
+    },
+    "pets": {
+      "type": "boolean"
     },
     "lang": {
       "type": "string",
@@ -42,4 +69,5 @@
   "autoCreatedAt": true,
   "autoUpdatedAt": true,
   "migrate": "alter"
+  
 }

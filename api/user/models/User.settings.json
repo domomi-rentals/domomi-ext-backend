@@ -42,12 +42,12 @@
       "via": "users",
       "dominant": true
     },
-    "tests": {
-      "collection": "test",
-      "via": "contributors"
-    },
     "renters": {
       "collection": "renter",
+      "via": "contributors"
+    },
+    "applications": {
+      "collection": "application",
       "via": "contributors"
     }
   },

@@ -28,11 +28,11 @@
       },
       "aws": {
         "adapter": "mysql",
-        "host": "aa1i08acd8zi3ml.c68pjxumf36q.us-west-2.rds.amazonaws.com",
+        "host": "domomidb.c68pjxumf36q.us-west-2.rds.amazonaws.com",
         "port": 3306,
-        "user": "DomoMi",
+        "user": "admin",
         "password": "domodbmi3",
-        "database": "ebdb"
+        "database": "domomi"
       }
     }
   }

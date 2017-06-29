@@ -64,11 +64,10 @@ module.exports = {
                 content: [
                     {text:'DomoMi Renter Ticket',style:'header'},
                     {text:'The Solution to Renter Verification.',style:'subheader'},
-                    
                     {   style: 'tableStyle',
                         layout: 'noBorders',
                         table: {
-                            widths: [150, 200],
+                            widths: [100, 200],
                             body: [
                                 ['First Name', renterInfo.fname],
                                 ['Last Name', renterInfo.lname],

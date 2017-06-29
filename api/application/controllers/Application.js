@@ -162,19 +162,24 @@ module.exports = {
     // send response with email info and link to validate contact page
     try {
       //Try see if application already created
-      let entry = yield Application.find({
+      let entry = yield Application.findOne({
         createdBy: userId,
         url: this.request.body.url
       });
       console.log("Entry: ", entry);
       let applicationId;
-      if (!entry.length){
+      if (!entry){
         console.log("No entry Found -> create new");
         entry = yield Application.create(this.request.body);
         console.log("Created: ", entry);
         applicationId = entry.id;
       }else{ //Entry Found
-        applicationId = entry[0].id;
+        applicationId = entry.id;
+      }
+
+      if (entry.validationUrl){
+          this.body = entry.validationUrl;
+          return;
       }
      
 
@@ -191,6 +196,14 @@ module.exports = {
       let validatePageURL = "/renter-info/?id=";
 
       let returnURL = hostURL+validatePageURL+token;
+
+
+
+      let validationUrl = yield Application.update(applicationId,{validationUrl:returnURL});
+
+      if (validationUrl){
+        console.log("Saved Token: ", validationUrl);
+      }
       
       this.body = returnURL;
 
