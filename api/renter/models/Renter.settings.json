@@ -2,6 +2,7 @@
   "identity": "renter",
   "connection": "aws",
   "displayedAttribute": "",
+  "defaultTemplate": "default",
   "schema": true,
   "attributes": {
     "fname": {
@@ -13,8 +14,7 @@
       "required": true
     },
     "birthdate": {
-      "type": "date",
-      "required": true
+      "type": "string"
     },
     "phone": {
       "type": "string",
@@ -32,6 +32,9 @@
       "type": "boolean",
       "required": true
     },
+    "oldAddress": {
+        "type": "string"
+      },
     "isRenting": {
       "type": "boolean"
     },

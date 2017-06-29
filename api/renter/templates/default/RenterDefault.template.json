@@ -10,8 +10,7 @@
         "required": true
       },
       "birthdate": {
-        "type": "date",
-        "required": true
+        "type": "string"
       },
       "phone": {
         "type": "string",
@@ -28,6 +27,9 @@
       "isNewAddress": {
         "type": "boolean",
         "required": true
+      },
+      "oldAddress": {
+        "type": "string"
       },
       "isRenting": {
         "type": "boolean"
