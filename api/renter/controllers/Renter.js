@@ -57,6 +57,7 @@ module.exports = {
       }
       this.body = entry;
     } catch (err) {
+      console.log(err);
       this.body = err;
     }
   },

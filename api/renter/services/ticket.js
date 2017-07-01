@@ -19,34 +19,8 @@ var pdfMake = require('pdfmake');
 
 module.exports = {
 
-    createTickee: function(){
-        var pdf = new PDFDocument({
-            size: 'LEGAL', // See other page sizes here: https://github.com/devongovett/pdfkit/blob/d95b826475dd325fb29ef007a9c1bf7a527e9808/lib/page.coffee#L69
-            info: {
-                Title: 'DomoMi',
-                Author: 'Some Author',
-            }
-        });
-
-        // Write stuff into PDF
-        pdf.text('Hello World');
-
-        // Stream contents to a file
-        pdf.pipe(
-            fs.createWriteStream('data/renter-tickets/test_complete.pdf')
-        )
-            .on('finish', function () {
-                console.log('PDF closed');
-            });
-
-        // Close PDF and write file.
-        pdf.end();
-
-        return pdf;
-
-    },
-
     createTicket: function (renterInfo) {
+        console.log(renterInfo);
 
 
         try {
@@ -72,7 +46,12 @@ module.exports = {
                                 ['First Name', renterInfo.fname],
                                 ['Last Name', renterInfo.lname],
                                 ['Birthdate', renterInfo.birthdate],
-                                ['Phone Number', renterInfo.phone]
+                                ['Phone Number', renterInfo.phone],
+                                ['Current Address', renterInfo.address],
+                                ['City', renterInfo.city],
+                                ['Currently renting', renterInfo.isRenting],
+                                ['Reason for moving', renterInfo.whyMove],
+                                ['Has pets', renterInfo.hasPets]
                             ]
                         }
                     }
@@ -99,6 +78,7 @@ module.exports = {
             pdfDoc.pipe(fs.createWriteStream(path+name+'.pdf'));
             pdfDoc.end();
             console.log("DONE!");
+            return path+name+'.pdf';
 
         } catch (err) {
             console.log("Error: ", err);

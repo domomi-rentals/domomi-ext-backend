@@ -15,7 +15,7 @@ const nodemailer = require('nodemailer');
 module.exports = {
 
 
-    sendEmail: function * (emailObj) {
+    sendEmail: function* (emailObj) {
 
 
         console.log("Ok in the Fn!");
@@ -26,21 +26,24 @@ module.exports = {
             // secure: true, // secure:true for port 465, secure:false for port 587
             service: 'Gmail',
             auth: {
-                user: 'kkundanmal@gmail.com',
-                pass: 'kk/goog28'
+                user: "no-reply@domomi.com",
+                pass: "nomo-reply123"
             }
+
         });
+
+        
 
         // setup email data with unicode symbols
         let mailOptions = {
-            from: '<kkundanmal@gmail.com>', // sender address
+            from: '<no-reply@domomi.com>', // sender address
             to: emailObj.to, // list of receivers
             subject: emailObj.subject, // Subject line
             text: emailObj.text, // plain text body
             html: emailObj.html // html body
         };
 
-        if (emailObj.hasOwnProperty("attachment")){
+        if (emailObj.hasOwnProperty("attachment")) {
             console.log("TRUE!");
             mailOptions.attachments = [{   // file on disk as an attachment
                 filename: emailObj.attachment.filename,

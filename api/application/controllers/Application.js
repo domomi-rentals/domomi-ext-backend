@@ -118,8 +118,14 @@ module.exports = {
         };
         let sendEmail = yield strapi.api.application.services.emailapp.sendEmail(mailOptions);
         console.log(sendEmail);
-        this.body = sendEmail;
-
+        if (sendEmail.accepted.length > 0){
+          this.redirect('/renter-info/success.html');
+          // this.body = "Email Sent!";;l
+        }else{
+          this.redirect('/renter-info/error.html');
+          // this.body = "Error sending email.";
+        }
+        
         // if (sendEmail){
         //   console.dir(sendEmail);
         //   this.body = "Success, Email Sent!";
@@ -166,12 +172,12 @@ module.exports = {
         createdBy: userId,
         url: this.request.body.url
       });
-      console.log("Entry: ", entry);
+      // console.log("Entry: ", entry);
       let applicationId;
       if (!entry){
         console.log("No entry Found -> create new");
         entry = yield Application.create(this.request.body);
-        console.log("Created: ", entry);
+        console.log("Created: Entry: ",entry.id);
         applicationId = entry.id;
       }else{ //Entry Found
         applicationId = entry.id;
@@ -187,7 +193,7 @@ module.exports = {
       let urlData = {user:userId,appId:applicationId}; 
       console.log(urlData);
       let token = strapi.api.application.services.urltoken.createToken(urlData);
-      console.log(token);
+      // console.log(token);
 
       this.assert(token,500,"Error creating Application token");
 

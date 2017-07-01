@@ -17,6 +17,9 @@
     "price": {
       "type": "string"
     },
+    "description": {
+      "type": "string"
+    },
     "bedRooms": {
       "type": "string"
     },
@@ -45,7 +48,7 @@
       "type": "string"
     },
     "availableDate": {
-      "type": "array"
+      "type": "string"
     },
     "gmap": {
       "type": "string"
@@ -57,7 +60,7 @@
       "type": "string"
     },
     "attributeList": {
-      "type": "string"
+      "type": "array"
     },
     "validationUrl": {
       "type": "string"

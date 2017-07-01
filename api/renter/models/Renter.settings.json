@@ -44,7 +44,7 @@
     "whyMove": {
       "type": "string"
     },
-    "pets": {
+    "hasPets": {
       "type": "boolean"
     },
     "lang": {
