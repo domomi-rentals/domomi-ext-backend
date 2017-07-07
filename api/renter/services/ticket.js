@@ -21,7 +21,7 @@ module.exports = {
 
     createTicket: function (renterInfo) {
         console.log(renterInfo);
-
+        renterInfo.hasPets = (renterInfo.hasPets) ? "Yes" : "No";
 
         try {
             var fonts = {
@@ -51,7 +51,7 @@ module.exports = {
                                 ['City', renterInfo.city],
                                 ['Currently renting', renterInfo.isRenting],
                                 ['Reason for moving', renterInfo.whyMove],
-                                ['Has pets', renterInfo.hasPets]
+                                ['Renter has pets', renterInfo.hasPets]
                             ]
                         }
                     }
