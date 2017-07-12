@@ -60,16 +60,13 @@
       "type": "boolean"
     },
     "roommates": {
-      "type": "integer",
-      "required": true
+      "type": "integer"
     },
     "parking": {
-      "type": "integer",
-      "required": true
+      "type": "integer"
     },
     "pets": {
-      "type": "integer",
-      "required": true
+      "type": "integer"
     },
     "createdBy": {
       "model": "user"

@@ -63,8 +63,7 @@
         "required" :true
       },
       "pets": {
-        "type": "integer",
-        "required" : true
+        "type": "integer"
       }
     },
     "displayedAttribute": "fname"
