@@ -2,6 +2,7 @@
   "identity": "renter",
   "connection": "aws",
   "displayedAttribute": "",
+  "defaultTemplate": "default",
   "schema": true,
   "attributes": {
     "fname": {
