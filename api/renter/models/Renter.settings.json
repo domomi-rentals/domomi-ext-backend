@@ -2,7 +2,6 @@
   "identity": "renter",
   "connection": "aws",
   "displayedAttribute": "",
-  "defaultTemplate": "default",
   "schema": true,
   "attributes": {
     "fname": {
@@ -14,11 +13,19 @@
       "required": true
     },
     "birthdate": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "phone": {
       "type": "string",
       "required": true
+    },
+    "occupation": {
+      "type": "string",
+      "required": true
+    },
+    "linkedinUrl": {
+      "type": "string"
     },
     "address": {
       "type": "string",
@@ -33,8 +40,8 @@
       "required": true
     },
     "oldAddress": {
-        "type": "string"
-      },
+      "type": "string"
+    },
     "isRenting": {
       "type": "boolean"
     },
@@ -44,19 +51,24 @@
     "whyMove": {
       "type": "string"
     },
-    "hasPets": {
+    "annualIncome": {
+      "type": "string",
+      "required": true
+    },
+    "financialSupport": {
       "type": "boolean"
     },
-    "lang": {
-      "type": "string",
+    "roommates": {
+      "type": "integer",
       "required": true
     },
-    "template": {
-      "type": "string",
+    "parking": {
+      "type": "integer",
       "required": true
     },
-    "id_ref": {
-      "type": "int"
+    "pets": {
+      "type": "integer",
+      "required": true
     },
     "createdBy": {
       "model": "user"
@@ -72,5 +84,4 @@
   "autoCreatedAt": true,
   "autoUpdatedAt": true,
   "migrate": "alter"
-  
 }

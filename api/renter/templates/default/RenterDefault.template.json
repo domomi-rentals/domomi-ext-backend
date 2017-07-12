@@ -16,6 +16,13 @@
         "type": "string",
         "required": true
       },
+      "occupation": {
+        "type": "string",
+        "required": true
+      },
+      "linkedinUrl": {
+        "type": "string"
+      },
       "address": {
         "type": "string",
         "required": true
@@ -40,8 +47,24 @@
       "whyMove": {
         "type": "string"
       },
-      "pets": {
+      "annualIncome": {
+        "type": "string",
+        "required": true
+      },
+      "financialSupport": {
         "type": "boolean"
+      },
+      "roommates": {
+        "type": "integer",
+        "required" :true
+      },
+      "parking": {
+        "type": "integer",
+        "required" :true
+      },
+      "pets": {
+        "type": "integer",
+        "required" : true
       }
     },
     "displayedAttribute": "fname"
