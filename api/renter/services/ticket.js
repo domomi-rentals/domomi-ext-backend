@@ -26,12 +26,11 @@ module.exports = {
         let contactHeader = [{ text: 'First Name', style: 'tableHeader' }, { text: 'Last Name', style: 'tableHeader' }, { text: 'Phone', style: 'tableHeader' }, { text: 'Email', style: 'tableHeader' }];
         let contactBody = [renterInfo.fname, renterInfo.lname, renterInfo.phone, renterInfo.createdBy.email];
 
+        let financeHeader = ['Annual Income', 'Occupation', 'Employment History']; // If financially supported -> add header
+        let financeBody = [renterInfo.annualIncome, renterInfo.occupation, renterInfo.linkedinUrl];
         if (renterInfo.annualIncome == '0-10k'){
-            let financeHeader = ['Annual Income', 'Occupation', 'Financially Supported', 'Employment History']; // If financially supported -> add header
-            let financeBody = [renterInfo.annualIncome, renterInfo.occupation, 'Yes', renterInfo.linkedinUrl];
-        }else{
-            let financeHeader = ['Annual Income', 'Occupation', 'Employment History']; // If financially supported -> add header
-            let financeBody = [renterInfo.annualIncome, renterInfo.occupation, renterInfo.linkedinUrl];
+            financeHeader = ['Annual Income', 'Occupation', 'Financially Supported', 'Employment History']; // If financially supported -> add header
+            financeBody = [renterInfo.annualIncome, renterInfo.occupation, 'Yes', renterInfo.linkedinUrl];
         }
         
 
