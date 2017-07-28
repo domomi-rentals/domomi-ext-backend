@@ -199,7 +199,8 @@ module.exports = {
 
       // Todo: Return mailto link to validate contact with token as GET querystring
       // let hostURL = "localhost:1337"; // could be hosted on a different domain
-      let hostUrl = "http://ec2-54-149-222-170.us-west-2.compute.amazonaws.com:1337"; // Url not URL
+      // let hostUrl = "http://ec2-54-149-222-170.us-west-2.compute.amazonaws.com:1337"; // Url not URL
+      let hostUrl = "cns.homerchrome.com";
       let validatePageURL = "/renter-info/?id=";
 
       let returnURL = hostUrl+validatePageURL+token;
