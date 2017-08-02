@@ -3,7 +3,7 @@
     "facebook": {
       "key": "104775243530067",
       "secret": "1e0410d8d55561558b3d4a171ff3e85a",
-      "callback": "/auth/facebook/callback",
+      "callback": "http://cns.homerchrome.com/auth/facebook/callback",
       "scope": ["email"]
     },
     "google": {
