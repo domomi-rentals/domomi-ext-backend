@@ -1,7 +1,7 @@
 {
   "host": "localhost",
   "port": 1337,
-  "frontendUrl": "http://cns.homerchrome.com",
+  "frontendUrl": "",
   "reload": {
     "timeout": 1000,
     "workers": 0
