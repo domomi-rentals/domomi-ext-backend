@@ -1,10 +1,10 @@
 {
   "smtp": {
-    "from": "<no-reply@website.com>",
+    "from": "no-reply@domomi.com",
     "service": {
-      "name": "",
-      "user": "",
-      "pass": ""
+      "name": "Gmail",
+      "user": "no-reply@domomi.com",
+      "pass": "nomo-reply123"
     }
   }
 }
