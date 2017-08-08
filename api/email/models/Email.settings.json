@@ -1,6 +1,6 @@
 {
   "identity": "email",
-  "connection": "default",
+  "connection": "aws",
   "schema": true,
   "limit": 20,
   "defaultTemplate": "default",
