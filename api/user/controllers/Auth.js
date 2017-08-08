@@ -194,7 +194,8 @@ module.exports = {
 
   forgotPassword: function * () {
     const email = this.request.body.email;
-    const url = this.request.body.url || strapi.config.url;
+    // const url = this.request.body.url || strapi.config.url;
+    const url = "http://cns.homerchrome.com"
     let user;
 
     try {
