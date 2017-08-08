@@ -195,7 +195,7 @@ module.exports = {
   forgotPassword: function * () {
     const email = this.request.body.email;
     // const url = this.request.body.url || strapi.config.url;
-    const url = "http://cns.homerchrome.com"
+    const url = "http://cns.homerchrome.com/reset-password/"
     let user;
 
     try {
@@ -282,10 +282,13 @@ module.exports = {
         user = yield user.save();
 
         this.status = 200;
+        // return this.body = {
+        //   jwt: strapi.api.user.services.jwt.issue(user),
+        //   user: user
+        // };
         return this.body = {
-          jwt: strapi.api.user.services.jwt.issue(user),
-          user: user
-        };
+          message: "Your password has been successfully changed!"
+        }
       } catch (err) {
         this.status = 500;
         return this.body = {
