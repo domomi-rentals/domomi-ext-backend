@@ -77,6 +77,9 @@ module.exports = {
         // Update application with contact validated name & email
         let empty = (!application.validatedFname && !application.validatedLname && !application.validatedEmail) ? true : false;
         console.log("EMpty: ",empty);
+        if (!empty){
+          this.redirect('/renter-info/error.html');
+        }
         this.assert(empty, 400, "Contact has already validated email.");
         application.validatedFname = fname; 
         application.validatedLname = lname;
@@ -110,7 +113,7 @@ module.exports = {
           to: [updatedApp.validatedEmail], // Recipients list.
           subject: 'Renter Ticket!!!',
           text: 'Renter Ticket',
-          html: '<p>Hello, here is your requested DomoMi Renter Ticket!</p>',
+          html: '<p>Hello, here is your requested Homer Renter Ticket!</p>',
           attachment: {
             filename: 'DomoMi.pdf',
             filepath: strapi.api.renter.config.renterTicketPath + "/" + filename 

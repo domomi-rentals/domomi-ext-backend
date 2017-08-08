@@ -42,7 +42,7 @@ module.exports = {
 
         var dd = {
             content: [
-                { text: 'DomoMi Renter Ticket', style: 'header' },
+                { text: 'Homer Renter Ticket', style: 'header' },
                 { text: 'Universal Rental Services', style: 'subheader' },
                 { text: 'Contact Details', style: 'h2', margin: [0, 20, 0, 8] },
                 {
