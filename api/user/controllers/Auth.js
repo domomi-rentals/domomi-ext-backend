@@ -233,7 +233,8 @@ module.exports = {
 
     // Send an email to the user.
     try {
-      yield strapi.api.email.services.email.send({
+      // yield strapi.api.email.services.email.send({
+      yield strapi.api.application.services.emailapp.sendEmail({
         to: user.email,
         subject: 'Reset password',
         text: url + '?code=' + resetPasswordToken,
