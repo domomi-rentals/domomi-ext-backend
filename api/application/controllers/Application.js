@@ -106,7 +106,9 @@ module.exports = {
         console.log(renter);
         this.assert(renter, 500, "Error, Renter not Created!");
 
-        console.log("User ", this.user);
+
+        let user = yield User.findOne(data.user);
+        console.log("User ", user);
 
 
         let filename = renter.fname + "-" + renter.id + ".pdf";
@@ -123,7 +125,7 @@ module.exports = {
           `,
           html: `<p>Hi ` + application.validatedFname + `!
 
-          We have your requested Rental Application from <a href="mailto:`+this.user.email+`"> `+ renter.fname + `</a> attached here.
+          We have your requested Rental Application from <a href="mailto:`+user.email+`"> `+ renter.fname + `</a> attached here.
 
           Best Regards,
           <b>Homer</b> - Your Rental Services Companion.
