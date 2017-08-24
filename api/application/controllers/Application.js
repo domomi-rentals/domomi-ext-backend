@@ -124,10 +124,10 @@ module.exports = {
           Homer - Your Rental Services Companion.
           `,
           html: `<p>Hi ` + application.validatedFname + `!
-
+          <br>
           We have your requested Rental Application from <a href="mailto:`+user.email+`"> `+ renter.fname + `</a> attached here.
-
-          Best Regards,
+          <br>
+          Best Regards,<br>
           <b>Homer</b> - Your Rental Services Companion.
           </p>`,
           attachment: {
