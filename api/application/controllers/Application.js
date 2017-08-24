@@ -106,6 +106,8 @@ module.exports = {
         console.log(renter);
         this.assert(renter, 500, "Error, Renter not Created!");
 
+        console.log("User ", this.user);
+
 
         let filename = renter.fname + "-" + renter.id + ".pdf";
         console.log(strapi.api.renter.config.renterTicketPath + "/" + filename);
@@ -121,7 +123,7 @@ module.exports = {
           `,
           html: `<p>Hi ` + application.validatedFname + `!
 
-          We have your requested Rental Application from <a href="mailto:`+this.user.username+`"> `+ renter.fname + `</a> attached here.
+          We have your requested Rental Application from <a href="mailto:`+this.user.email+`"> `+ renter.fname + `</a> attached here.
 
           Best Regards,
           <b>Homer</b> - Your Rental Services Companion.
