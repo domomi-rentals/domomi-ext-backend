@@ -74,6 +74,15 @@
     "validatedEmail": {
       "type": "string"
     },
+    "removed": {
+      "type": "boolean"
+    },
+    "dateRemoved":{
+      "type": "string"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
     "createdBy": {
       "model": "user"
     },
