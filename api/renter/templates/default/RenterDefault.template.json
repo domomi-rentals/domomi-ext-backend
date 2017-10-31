@@ -55,6 +55,9 @@
       "whyMove": {
         "type": "string"
       },
+      "meaningOfHome": {
+        "type": "string"
+      },
       "annualIncome": {
         "type": "string",
         "required": true
